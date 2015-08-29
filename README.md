@@ -1,50 +1,61 @@
-<h1>Penguins App</h1>
+<h1>User Authorization Apps</h1>
 
-<h2>What does this app do</h2>
-  <h4>
-    <p>
-      This is an educational app, with information about Penguins.
-    </p>
-  </h4>
-  <h2>What can I learn about Penguins</h2>
+  <h2>What Do These Apps Do</h2>
+    <h4>
+      <p>
+        This repository is a collection of four apps that demonstrate the use of user authorization
+        to access a database.  Three apps share a common Firebase database, and if you register
+        in one app, you can use the same login in the other apps.  There is a web version, an
+        Android version, and an apple (iPad/iPhone) version.  The other app uses MongoDB
+        for the database.  It is a MEAN (Mongo DB, Express, Angular JS, Node JS) stack app.
+      </p>
+    </h4>
+    
+  <h2>What Features Do These Apps Have</h2>
     <h4>
       <ol>
-        <li>Basic Facts about Penguints</li>
-        <li>What they eat</li>
-        <li>How many Penguins are there</li>
-        <li>Where do they live</li>
-        <li>How do they behave</li>
-        <li>How do they reproduce</li>
+        <li>Register an Account with E-Mail/Password</li>
+        <li>Login using E-Mail/Password</li>
+        <li>Login user social media (Facebook, Google, Twitter, Github)</li>
+        <li>Change Password for your E-Mail/Password account</li>
+        <li>Modify the menu system if logged in/logged out</li>
       </ol>
     </h4>
 
-  <h2>Getting the App</h2>
+  <h2>Getting The Apps</h2>
     <h4>
       <p>
-        This app is available three ways:
+        This app is available four ways:
       </p>
       <ol>
         <li>
-          <a href="http://scottnakada.github.io/Penguins/yoPenguins/dist/public/index.html">
+          <a href="http://scottnakada.github.io/UserAuth/yoFireAuth/dist/public/index.html">
             <img src="images/Web.png"/>
           </a>
-          On the <a href="http://scottnakada.github.io/Penguins/yoPenguins/dist/public/index.html">web</a>:<br><br>
+          On the <a href="http://scottnakada.github.io/UserAuth/yoFireAuth/dist/public/index.html">web</a>:<br><br>
         </li>
         <li>
-          <a href="http://www.amazon.com/Quickstart-Prototypes-Learn-about-Penguins/dp/B01486HQ9Y/ref=sr_1_4?s=mobile-apps&ie=UTF8&qid=1440172469&sr=1-4&keywords=penguins&refinements=p_n_theme_browse-bin%3A2479024011">
+          <a href="http://scottnakada.github.io/UserAuth/yoMongoAuth/dist/public/index.html">
+            <img src="images/Mean.png"/>
+          </a>
+          On the <a href="http://scottnakada.github.io/UserAuth/yoMongoAuth/dist/public/index.html">web</a>:<br><br>
+        </li>
+        <li>
+          <a href="http://www.amazon.com/Ionic-Firebase-User-Authentication-App/dp/B014LUR2HI/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1440823545&sr=1-1&keywords=ionFireAuth">
             <img src="images/Android.png"/>
           </a>
           On Android devices through the
-          <a href="http://www.amazon.com/Quickstart-Prototypes-Learn-about-Penguins/dp/B01486HQ9Y/ref=sr_1_4?s=mobile-apps&ie=UTF8&qid=1440172469&sr=1-4&keywords=penguins&refinements=p_n_theme_browse-bin%3A2479024011">
+          <a href="http://www.amazon.com/Ionic-Firebase-User-Authentication-App/dp/B014LUR2HI/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1440823545&sr=1-1&keywords=ionFireAuth">
             Amazon Apps Store
           </a>.
         </li>
         <li>
-          <a href="http://scottnakada.github.io/Penguins/index.html#ios">
+          <a href="http://scottnakada.github.io/UserAuth/index.html#ios">
             <img src="images/Apple.png"/>
           </a>
           On Apple devices (iPhone/iPad), by downloading an app called Ionic View, and selecting the
-          app id: <a href="http://scottnakada.github.io/Penguins/index.html#ios">0FA8D8B2</a>:<br><br>
+          app id: <a href="http://scottnakada.github.io/UserAuth/index.html#ios">43FF8114</a>. See the next section for directions
+          to try the app.<br><br>
         </li>
       </ol>
     </h4>
