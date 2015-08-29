@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Github Intro Page for User Authorization Apps">
+    <meta name="author" content="Scott M. Nakada">
+
+    <title>Github Intro Page for User Authorization Apps</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- AngularJS -->
+    <script src="js/angular.min.js"></script>
+
+    <!-- Angular Custom JavaScript -->
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+
+</head>
+
+<body data-ng-app="gitTemplate" data-ng-controller="MainCtrl">
+
+<!-- Navigation -->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-blue btn-lg pull-right toggle">
+            <i class="fa fa-times"></i>
+        </a>
+        <li class="sidebar-brand">
+            <a href="#top" onclick=$("#menu-close").click();>User Authorization</a>
+        </li>
+        <li>
+            <a href="#top" onclick=$("#menu-close").click();>Home</a>
+        </li>
+        <li>
+            <a href="#about" onclick=$("#menu-close").click();>About</a>
+        </li>
+        <li>
+            <a href="#ios" onclick=$("#menu-close").click();>Apple</a>
+        </li>
+        <li>
+            <a href="#platform" onclick=$("#menu-close").click();>Platforms</a>
+        </li>
+        <li>
+            <a href="#technologies" onclick=$("#menu-close").click();>Technologies</a>
+        </li>
+        <li>
+            <a href="#tools" onclick=$("#menu-close").click();>Tools</a>
+        </li>
+        <li>
+            <a href="#api" onclick=$("#menu-close").click();>APIs</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Header -->
+<header id="top" class="header">
+    <div class="text-vertical-center">
+        <h1>User Authorization Apps</h1>
+
+        <h3>Sample User Authorization Apps, using Firebase or Mongo DB,
+            via email/password, Facebook, Google, Twitter, or Github</h3>
+
+        <h2>Github Links</h2>
+
+        <a href="https://github.com/scottnakada/UserAuth" class="btn btn-blue"
+           title="Github web-page for scottnakada/UserAuth"
+           aria-label="Github web-page for scottnakada/UserAuth">Github</a>
+        &nbsp;&nbsp;
+        <a href="github-windows://openRepo/https://github.com/scottnakada/UserAuth" class="btn btn-blue"
+           title="Save scottnakada/UserAuth to your computer and use it in GitHub Desktop."
+           aria-label="Save scottnakada/UserAuth to your computer and use it in GitHub Desktop.">
+            <span class="octicon octicon-desktop-download"></span>
+            Clone in Desktop
+        </a>
+        &nbsp;&nbsp;
+        <a href="https://github.com/scottnakada/UserAuth/archive/master.zip"
+           class="btn btn-blue"
+           aria-label="Download the contents of scottnakada/UserAuth as a zip file"
+           title="Download the contents of scottnakada/UserAuth as a zip file"
+           rel="nofollow">
+            <span class="octicon octicon-cloud-download"></span>
+            Download ZIP
+        </a>
+
+        <h2>Platforms (Click the Platform Icon to Try the App)</h2>
+
+        <div class="row">
+            <a data-ng-href="{{web.link}}">
+                <img data-ng-src="{{details.web.image}}" data-ng-show="platforms.web"/>
+            </a>
+            <a data-ng-href="{{mean.link}}">
+                <img data-ng-src="{{details.mean.image}}" data-ng-show="platforms.mean"/>
+            </a>
+            <a data-ng-href="{{android.link}}">
+                <img data-ng-src="{{details.android.image}}" data-ng-show="platforms.android"/>
+            </a>
+            <a data-ng-href="{{ios.link}}">
+                <img data-ng-src="{{details.ios.image}}" data-ng-show="platforms.ios"/>
+            </a>
+            <a data-ng-href="{{details.arduino.link}}">
+                <img data-ng-src="{{details.arduino.image}}" data-ng-show="platforms.arduino"/>
+            </a>
+            <a data-ng-href="{{details.raspberryPi.link}}">
+                <img data-ng-src="{{details.raspberryPi.image}}" data-ng-show="platforms.raspberryPi"/>
+            </a>
+            <a data-ng-href="{{details.intelEdison.link}}">
+                <img data-ng-src="{{details.intelEdison.image}}" data-ng-show="platforms.intelEdison"/>
+            </a>
+        </div>
+
+        <h2>Technologies</h2>
+
+        <div class="row">
+            <a data-ng-href="{{details.html5.link}}">
+                <img data-ng-src="{{details.html5.image}}" data-ng-show="technologies.html5"/>
+            </a>
+            <a data-ng-href="{{details.css3.link}}">
+                <img data-ng-src="{{details.css3.image}}" data-ng-show="technologies.css3"/>
+            </a>
+            <a data-ng-href="{{details.javascript.link}}">
+                <img data-ng-src="{{details.javascript.image}}" data-ng-show="technologies.javascript"/>
+            </a>
+            <a data-ng-href="{{details.jQuery.link}}">
+                <img data-ng-src="{{details.jQuery.image}}" data-ng-show="technologies.jQuery"/>
+            </a>
+            <a data-ng-href="{{details.jQueryMobile.link}}">
+                <img data-ng-src="{{details.jQueryMobile.image}}"
+                     data-ng-show="technologies.jQueryMobile"/>
+            </a>
+            <a data-ng-href="{{details.angularJS.link}}">
+                <img data-ng-src="{{details.angularJS.image}}" data-ng-show="technologies.angularJS"/>
+            </a>
+            <a data-ng-href="{{details.bootstrap.link}}">
+                <img data-ng-src="{{details.bootstrap.image}}" data-ng-show="technologies.bootstrap"/>
+            </a>
+            <a data-ng-href="{{details.php.link}}">
+                <img data-ng-src="{{details.php.image}}" data-ng-show="technologies.php"/>
+            </a>
+            <a data-ng-href="{{details.python.link}}">
+                <img data-ng-src="{{details.python.image}}" data-ng-show="technologies.python"/>
+            </a>
+            <a data-ng-href="{{details.nodeJS.link}}">
+                <img data-ng-src="{{details.nodeJS.image}}" data-ng-show="technologies.nodeJS"/>
+            </a>
+            <a data-ng-href="{{details.expressJS.link}}">
+                <img data-ng-src="{{details.expressJS.image}}" data-ng-show="technologies.expressJS"/>
+            </a>
+            <a data-ng-href="{{details.firebase.link}}">
+                <img data-ng-src="{{details.firebase.image}}" data-ng-show="technologies.firebase"/>
+            </a>
+            <a data-ng-href="{{details.pouchDB.link}}">
+                <img data-ng-src="{{details.pouchDB.image}}" data-ng-show="technologies.pouchDB"/>
+            </a>
+            <a data-ng-href="{{details.couchDB.link}}">
+                <img data-ng-src="{{details.couchDB.image}}" data-ng-show="technologies.couchDB"/>
+            </a>
+            <a data-ng-href="{{details.mongoDB.link}}">
+                <img data-ng-src="{{details.mongoDB.image}}" data-ng-show="technologies.mongoDB"/>
+            </a>
+            <a data-ng-href="{{details.mySQL.link}}">
+                <img data-ng-src="{{details.mySQL.image}}" data-ng-show="technologies.mySQL"/>
+            </a>
+        </div>
+
+        <h2>Tools</h2>
+
+        <div class="row">
+            <a data-ng-href="{{details.webStorm.link}}">
+                <img data-ng-src="{{details.webStorm.image}}" data-ng-show="tools.webStorm"/>
+            </a>
+            <a data-ng-href="{{details.ionic.link}}">
+                <img data-ng-src="{{details.ionic.image}}" data-ng-show="tools.ionic"/>
+            </a>
+            <a data-ng-href="{{details.cordova.link}}">
+                <img data-ng-src="{{details.cordova.image}}" data-ng-show="tools.cordova"/>
+            </a>
+            <a data-ng-href="{{details.phoneGap.link}}">
+                <img data-ng-src="{{details.phoneGap.image}}" data-ng-show="tools.phoneGap"/>
+            </a>
+            <a data-ng-href="{{details.yeoman.link}}">
+                <img data-ng-src="{{details.yeoman.image}}" data-ng-show="tools.yeoman"/>
+            </a>
+            <a data-ng-href="{{details.github.link}}">
+                <img data-ng-src="{{details.github.image}}" data-ng-show="tools.github"/>
+            </a>
+            <a data-ng-href="{{details.npm.link}}">
+                <img data-ng-src="{{details.npm.image}}" data-ng-show="tools.npm"/>
+            </a>
+            <a data-ng-href="{{details.grunt.link}}">
+                <img data-ng-src="{{details.grunt.image}}" data-ng-show="tools.grunt"/>
+            </a>
+            <a data-ng-href="{{details.bower.link}}">
+                <img data-ng-src="{{details.bower.image}}" data-ng-show="tools.bower"/>
+            </a>
+        </div>
+
+        <h2>APIs</h2>
+
+        <div class="row">
+            <a data-ng-href="{{details.facebook.link}}">
+                <img data-ng-src="{{details.facebook.image}}" data-ng-show="api.facebook"/>
+            </a>
+            <a data-ng-href="{{details.google.link}}">
+                <img data-ng-src="{{details.google.image}}" data-ng-show="api.google"/>
+            </a>
+            <a data-ng-href="{{details.twitter.link}}">
+                <img data-ng-src="{{details.twitter.image}}" data-ng-show="api.twitter"/>
+            </a>
+            <a data-ng-href="{{details.github.link}}">
+                <img data-ng-src="{{details.github.image}}" data-ng-show="api.github"/>
+            </a>
+        </div>
+
+    </div>
+</header>
+
+<!-- About -->
+<section id="about" class="about">
+    <div class="container">
+        <h1>User Authorization Apps</h1>
+
+        <h2>What Do These Apps Do</h2>
+        <h4>
+            <p>
+                This repository is a collection of four apps that demonstrate the use of user authorization
+                to access a database.  Three apps share a common Firebase database, and if you register
+                in one app, you can use the same login in the other apps.  There is a web version, an
+                Android version, and an apple (iPad/iPhone) version.  The other app uses MongoDB
+                for the database.  It is a MEAN (Mongo DB, Express, Angular JS, Node JS) stack app.
+            </p>
+        </h4>
+        <h2>What Features Do These Apps Have</h2>
+        <h4>
+            <ol>
+                <li>Register an Account with E-Mail/Password</li>
+                <li>Login using E-Mail/Password</li>
+                <li>Login user social media (Facebook, Google, Twitter, Github)</li>
+                <li>Change Password for your E-Mail/Password account</li>
+                <li>Modify the menu system if logged in/logged out</li>
+            </ol>
+        </h4>
+
+        <h2>Getting The Apps</h2>
+        <h4>
+            <p>
+                This app is available four ways:
+            </p>
+            <ol>
+                <li>
+                    <a data-ng-href="{{web.link}}">
+                        <img data-ng-src="{{details.web.image}}" data-ng-show="platforms.web"/>
+                    </a>
+                    On the <a data-ng-href="{{web.link}}">web</a>:<br><br>
+                    <iframe width="100%" height="400px"
+                            src="http://scottnakada.github.io/UserAuth/yoFireAuth/dist/public/index.html">
+                        <p>Your browser does not support iframes.</p>
+                    </iframe>
+                </li>
+                <li>
+                    <a data-ng-href="{{mean.link}}">
+                        <img data-ng-src="{{details.mean.image}}" data-ng-show="platforms.mean"/>
+                    </a>
+                    On the <a data-ng-href="{{mean.link}}">web</a>:<br><br>
+                    <iframe width="100%" height="400px"
+                            src="http://scottnakada.github.io/UserAuth/yoMongoAuth/dist/public/index.html">
+                        <p>Your browser does not support iframes.</p>
+                    </iframe>
+                </li>
+                <li>
+                    <a data-ng-href="{{android.link}}">
+                        <img data-ng-src="{{details.android.image}}" data-ng-show="platforms.android"/>
+                    </a>
+                    On Android devices through the
+                    <a data-ng-href="{{android.link}}">
+                        Amazon Apps Store
+                    </a>.
+                </li>
+                <li>
+                    <a data-ng-href="{{ios.link}}">
+                        <img data-ng-src="{{details.ios.image}}" data-ng-show="platforms.ios"/>
+                    </a>
+                    On Apple devices (iPhone/iPad), by downloading an app called Ionic View, and selecting the
+                    app id: <a href="#ios">{{ios.ionicViewId}}</a>. See the next section for directions
+                    to try the app.<br><br>
+                </li>
+            </ol>
+        </h4>
+
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- iOS -->
+<section id="ios" class="ios bg-primary">
+    <div class="container">
+        <h1>Running the App on Apple Devices, using Ionic View</h1>
+
+
+        <h2>
+            <ol>
+                <li>
+                    <div>
+                        Load the Ionic View App from the App Store
+                        <br><br><img src="images/AppleAppStore.png" width="75%"><br><br>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        Start Ionic View
+                        <br><br><img src="images/AppleIonicView.png" width="75%"><br><br>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        Select "Preview a Shared App"
+                        <br><br><img src="images/ApplePreivewApp.png" width="75%"><br><br>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        Enter the code for this App {{ios.ionicViewId}}, click "Load App"
+                        <br><br><img src="images/AppleAppRunning.png" width="75%"><br><br>
+                    </div>
+                </li>
+            </ol>
+        </h2>
+
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Platforms -->
+<section id="platform" class="platform">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Platforms</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.web">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.web.image}}"/>
+                            <h4>
+                                <strong>{{details.web.name}}</strong>
+                            </h4>
+
+                            <p>{{details.web.info}}</p>
+                            <a data-ng-href="{{details.web.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.mean">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.mean.image}}"/>
+                            <h4>
+                                <strong>{{details.mean.name}}</strong>
+                            </h4>
+
+                            <p>{{details.mean.info}}</p>
+                            <a data-ng-href="{{details.mean.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.android">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.android.image}}"/>
+                            <h4>
+                                <strong>{{details.android.name}}</strong>
+                            </h4>
+
+                            <p>{{details.android.info}}</p>
+                            <a data-ng-href="{{details.android.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.ios">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.ios.image}}"/>
+                            <h4>
+                                <strong>{{details.ios.name}}</strong>
+                            </h4>
+
+                            <p>{{details.ios.info}}</p>
+                            <a data-ng-href="{{details.ios.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.arduino">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.arduino.image}}"/>
+                            <h4>
+                                <strong>{{details.arduino.name}}</strong>
+                            </h4>
+
+                            <p>{{details.arduino.info}}</p>
+                            <a data-ng-href="{{details.arduino.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.raspberryPi">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.raspberryPi.image}}"/>
+                            <h4>
+                                <strong>{{details.raspberryPi.name}}</strong>
+                            </h4>
+
+                            <p>{{details.raspberryPi.info}}</p>
+                            <a data-ng-href="{{details.raspberryPi.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.intelEdison">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.intelEdison.image}}"/>
+                            <h4>
+                                <strong>{{details.intelEdison.name}}</strong>
+                            </h4>
+
+                            <p>{{details.intelEdison.info}}</p>
+                            <a data-ng-href="{{details.intelEdison.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Technologies -->
+<section id="technologies" class="technology bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Technologies</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.html5">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.html5.image}}"/>
+                            <h4>
+                                <strong>{{details.html5.name}}</strong>
+                            </h4>
+
+                            <p>{{details.html5.info}}</p>
+                            <a data-ng-href="{{details.html5.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.css3">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.css3.image}}"/>
+                            <h4>
+                                <strong>{{details.css3.name}}</strong>
+                            </h4>
+
+                            <p>{{details.css3.info}}</p>
+                            <a data-ng-href="{{details.css3.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.javascript">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.javascript.image}}"/>
+                            <h4>
+                                <strong>{{details.javascript.name}}</strong>
+                            </h4>
+
+                            <p>{{details.javascript.info}}</p>
+                            <a data-ng-href="{{details.javascript.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.jQuery">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.jQuery.image}}"/>
+                            <h4>
+                                <strong>{{details.jQuery.name}}</strong>
+                            </h4>
+
+                            <p>{{details.jQuery.info}}</p>
+                            <a data-ng-href="{{details.jQuery.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.jQueryMobile">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.jQueryMobile.image}}"/>
+                            <h4>
+                                <strong>{{details.jQueryMobile.name}}</strong>
+                            </h4>
+
+                            <p>{{details.jQueryMobile.info}}</p>
+                            <a data-ng-href="{{details.jQueryMobile.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.angularJS">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.angularJS.image}}"/>
+                            <h4>
+                                <strong>{{details.angularJS.name}}</strong>
+                            </h4>
+
+                            <p>{{details.angularJS.info}}</p>
+                            <a data-ng-href="{{details.angularJS.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.bootstrap">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.bootstrap.image}}"/>
+                            <h4>
+                                <strong>{{details.bootstrap.name}}</strong>
+                            </h4>
+
+                            <p>{{details.bootstrap.info}}</p>
+                            <a data-ng-href="{{details.bootstrap.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.php">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.php.image}}"/>
+                            <h4>
+                                <strong>{{details.php.name}}</strong>
+                            </h4>
+
+                            <p>{{details.php.info}}</p>
+                            <a data-ng-href="{{details.php.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.python">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.python.image}}"/>
+                            <h4>
+                                <strong>{{details.python.name}}</strong>
+                            </h4>
+
+                            <p>{{details.python.info}}</p>
+                            <a data-ng-href="{{details.python.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.nodeJS">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.nodeJS.image}}"/>
+                            <h4>
+                                <strong>{{details.nodeJS.name}}</strong>
+                            </h4>
+
+                            <p>{{details.nodeJS.info}}</p>
+                            <a data-ng-href="{{details.nodeJS.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.expressJS">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.expressJS.image}}"/>
+                            <h4>
+                                <strong>{{details.expressJS.name}}</strong>
+                            </h4>
+
+                            <p>{{details.expressJS.info}}</p>
+                            <a data-ng-href="{{details.expressJS.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.firebase">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.firebase.image}}"/>
+                            <h4>
+                                <strong>{{details.firebase.name}}</strong>
+                            </h4>
+
+                            <p>{{details.firebase.info}}</p>
+                            <a data-ng-href="{{details.firebase.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.pouchDB">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.pouchDB.image}}"/>
+                            <h4>
+                                <strong>{{details.pouchDB.name}}</strong>
+                            </h4>
+
+                            <p>{{details.pouchDB.info}}</p>
+                            <a data-ng-href="{{details.pouchDB.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.couchDB">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.couchDB.image}}"/>
+                            <h4>
+                                <strong>{{details.couchDB.name}}</strong>
+                            </h4>
+
+                            <p>{{details.couchDB.info}}</p>
+                            <a data-ng-href="{{details.couchDB.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.mongoDB">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.mongoDB.image}}"/>
+                            <h4>
+                                <strong>{{details.mongoDB.name}}</strong>
+                            </h4>
+
+                            <p>{{details.mongoDB.info}}</p>
+                            <a data-ng-href="{{details.mongoDB.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.mySQL">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.mySQL.image}}"/>
+                            <h4>
+                                <strong>{{details.mySQL.name}}</strong>
+                            </h4>
+
+                            <p>{{details.mySQL.info}}</p>
+                            <a data-ng-href="{{details.mySQL.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Tools -->
+<section id="tools" class="tools">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Tools</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.webStorm">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.webStorm.image}}"/>
+                            <h4>
+                                <strong>{{details.webStorm.name}}</strong>
+                            </h4>
+
+                            <p>{{details.webStorm.info}}</p>
+                            <a data-ng-href="{{details.webStorm.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.ionic">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.ionic.image}}"/>
+                            <h4>
+                                <strong>{{details.ionic.name}}</strong>
+                            </h4>
+
+                            <p>{{details.ionic.info}}</p>
+                            <a data-ng-href="{{details.ionic.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.cordova">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.cordova.image}}"/>
+                            <h4>
+                                <strong>{{details.cordova.name}}</strong>
+                            </h4>
+
+                            <p>{{details.cordova.info}}</p>
+                            <a data-ng-href="{{details.cordova.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.phoneGap">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.phoneGap.image}}"/>
+                            <h4>
+                                <strong>{{details.phoneGap.name}}</strong>
+                            </h4>
+
+                            <p>{{details.phoneGap.info}}</p>
+                            <a data-ng-href="{{details.phoneGap.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.yeoman">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.yeoman.image}}"/>
+                            <h4>
+                                <strong>{{details.yeoman.name}}</strong>
+                            </h4>
+
+                            <p>{{details.yeoman.info}}</p>
+                            <a data-ng-href="{{details.yeoman.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.github">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.github.image}}"/>
+                            <h4>
+                                <strong>{{details.github.name}}</strong>
+                            </h4>
+
+                            <p>{{details.github.info}}</p>
+                            <a data-ng-href="{{details.github.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.npm">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.npm.image}}"/>
+                            <h4>
+                                <strong>{{details.npm.name}}</strong>
+                            </h4>
+
+                            <p>{{details.npm.info}}</p>
+                            <a data-ng-href="{{details.npm.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.grunt">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.grunt.image}}"/>
+                            <h4>
+                                <strong>{{details.grunt.name}}</strong>
+                            </h4>
+
+                            <p>{{details.grunt.info}}</p>
+                            <a data-ng-href="{{details.grunt.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.bower">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.bower.image}}"/>
+                            <h4>
+                                <strong>{{details.bower.name}}</strong>
+                            </h4>
+
+                            <p>{{details.bower.info}}</p>
+                            <a data-ng-href="{{details.bower.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- APIs -->
+<section id="api" class="api bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>APIs</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" data-ng-show="api.facebook">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.facebook.image}}"/>
+                            <h4>
+                                <strong>{{details.facebook.name}}</strong>
+                            </h4>
+
+                            <p>{{details.facebook.info}}</p>
+                            <a data-ng-href="{{details.facebook.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="api.google">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.google.image}}"/>
+                            <h4>
+                                <strong>{{details.google.name}}</strong>
+                            </h4>
+
+                            <p>{{details.google.info}}</p>
+                            <a data-ng-href="{{details.google.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="api.twitter">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.twitter.image}}"/>
+                            <h4>
+                                <strong>{{details.twitter.name}}</strong>
+                            </h4>
+
+                            <p>{{details.twitter.info}}</p>
+                            <a data-ng-href="{{details.twitter.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="api.github">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.github.image}}"/>
+                            <h4>
+                                <strong>{{details.github.name}}</strong>
+                            </h4>
+
+                            <p>{{details.github.info}}</p>
+                            <a data-ng-href="{{details.github.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Footer -->
+<footer class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>Quickstart Prototypes</strong>
+                </h4>
+
+                <p>9304 Galvin Avenue</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i> (760)-583-8366</li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:scottnakada@gmail.com">scottnakada@gmail.com</a>
+                    </li>
+                </ul>
+
+                <hr class="small">
+                <p>Copyright &copy; Quickstart Prototypes 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/custom.js"></script>
+
+
+</body>
+
+</html>

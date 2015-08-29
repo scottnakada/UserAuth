@@ -1,0 +1,49 @@
+<ion-view view-title="Home" name="home-view">
+  <ion-content class="padding">
+    <h1>Welcome to the Ionic/Firebase
+      User Authentication Demo</h1>
+
+    <!-- Hide if the user is signed in -->
+    <div class="list" ng-hide="signedIn()">
+
+      <div class="item item-button-right">
+        Create an Account
+        <button class="button button-calm" ng-click="go('app.register')">
+          Register
+        </button>
+      </div>
+      <div class="item item-button-right">
+        Login
+        <button class="button button-calm" ng-click="go('app.login')">
+          Login
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Show if the user is signed in -->
+    <div class="list" ng-show="signedIn()">
+
+      <div class="item item-button-right" ng-show="isAdmin()">
+        View Users
+        <button class="button button-calm" ng-click="go('app.admin')">
+          Admin
+        </button>
+      </div>
+      <div class="item item-button-right">
+        Change Password
+        <button class="button button-calm" ng-click="go('app.changePass')">
+          Change Password
+        </button>
+      </div>
+      <div class="item item-button-right">
+        Logout
+        <button class="button button-calm" ng-click="logout()">
+          Logout
+        </button>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

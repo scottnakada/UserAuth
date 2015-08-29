@@ -1,0 +1,28 @@
+<ion-view view-title="Admin" name="admin-view">
+  <ion-content>
+
+    <center>
+      <br>
+      <br>
+      <table border="2">
+        <thead>
+        <tr>
+          <th>Provider</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in users">
+          <td>{{user.provider}}&nbsp;&nbsp;</td>
+          <td>{{user.name}}&nbsp;&nbsp;</td>
+          <td>{{user.email}}&nbsp;&nbsp;</td>
+          <td>{{(user.role == 0 ? "User" : (user.role == 1 ? "Manager" : "Admin"))}}&nbsp;&nbsp;</td>
+        </tr>
+        </tbody>
+      </table>
+    </center>
+
+  </ion-content>
+</ion-view>

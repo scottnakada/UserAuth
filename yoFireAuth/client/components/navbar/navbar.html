@@ -1,0 +1,54 @@
+<div class="header">
+  <div class="navbar navbar-default" role="navigation" ng-controller="NavbarCtrl">
+    <div class="container">
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="#js-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="/home">ShoppingCart
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+        <ul class="nav navbar-nav">
+          <li ng-class="{active: isActive('/home')}">
+            <a href="/home">Home</a>
+          </li>
+          <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}"
+              ng-show="signedIn()">
+            <a ng-href="{{item.link}}">{{item.title}}</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li ng-class="{active: isActive('/login')}" ng-hide="signedIn()">
+            <a href="/login">Login</a>
+          </li>
+          <li ng-class="{active: isActive('/register')}" ng-hide="signedIn()">
+            <a href="/register">Register</a>
+          </li>
+          <li ng-show="signedIn()" class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+              <img ng-src="{{currentUser.profile.gravatar}}" class="img-circle gravatar">
+              &nbsp;
+              {{currentUser.profile.name}}
+              <i class="fa fa-chevron-down"></i></a>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/changePass">
+                <i class="fa fa-key"></i> Change Password</a></li>
+              <li><a href="/home" ng-click="logout()">
+                <i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

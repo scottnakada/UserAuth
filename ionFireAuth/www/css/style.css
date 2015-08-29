@@ -1,0 +1,9 @@
+/* Empty. Add your own CSS if you like */
+.imgCenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.img-circle.gravatar {
+  width: 30px;
+}

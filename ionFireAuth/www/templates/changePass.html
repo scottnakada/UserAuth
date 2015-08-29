@@ -1,0 +1,16 @@
+<ion-view view-title="Change Password" name="changePass-view">
+    <ion-content class="padding">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input type="email" placeholder="Enter Email" ng-model="user.email">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="Enter Old Password" ng-model="user.oldPass">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="Enter New Password" ng-model="user.newPass">
+            </label>
+        </div>
+        <button class="button button-block button-calm" ng-click="changePassword(user)">Change Password</button>
+    </ion-content>
+</ion-view>
