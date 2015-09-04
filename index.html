@@ -108,16 +108,16 @@
 
         <div class="row">
             <a data-ng-href="{{web.link}}">
-                <img data-ng-src="{{details.web.image}}" data-ng-show="platforms.web"/>
+                <img data-ng-src="{{web.image}}" height="200px" data-ng-show="platforms.web"/>
             </a>
             <a data-ng-href="{{mean.link}}">
-                <img data-ng-src="{{details.mean.image}}" data-ng-show="platforms.mean"/>
+                <img data-ng-src="{{mean.image}}" height="200px" data-ng-show="platforms.mean"/>
             </a>
             <a data-ng-href="{{android.link}}">
-                <img data-ng-src="{{details.android.image}}" data-ng-show="platforms.android"/>
+                <img data-ng-src="{{android.image}}" height="200px" data-ng-show="platforms.android"/>
             </a>
             <a data-ng-href="{{ios.link}}">
-                <img data-ng-src="{{details.ios.image}}" data-ng-show="platforms.ios"/>
+                <img data-ng-src="{{ios.image}}" height="200px" data-ng-show="platforms.ios"/>
             </a>
             <a data-ng-href="{{details.arduino.link}}">
                 <img data-ng-src="{{details.arduino.image}}" data-ng-show="platforms.arduino"/>
@@ -245,10 +245,10 @@
         <h4>
             <p>
                 This repository is a collection of four apps that demonstrate the use of user authorization
-                to access a database.  Three apps share a common Firebase database, and if you register
-                in one app, you can use the same login in the other apps.  There is a web version, an
-                Android version, and an apple (iPad/iPhone) version.  The other app uses MongoDB
-                for the database.  It is a MEAN (Mongo DB, Express, Angular JS, Node JS) stack app.
+                to access a database. Three apps share a common Firebase database, and if you register
+                in one app, you can use the same login in the other apps. There is a web version, an
+                Android version, and an apple (iPad/iPhone) version. The other app uses MongoDB
+                for the database. It is a MEAN (Mongo DB, Express, Angular JS, Node JS) stack app.
             </p>
         </h4>
         <h2>What Features Do These Apps Have</h2>
@@ -270,7 +270,7 @@
             <ol>
                 <li>
                     <a data-ng-href="{{web.link}}">
-                        <img data-ng-src="{{details.web.image}}" data-ng-show="platforms.web"/>
+                        <img data-ng-src="{{web.image}}" height="200px" data-ng-show="platforms.web"/>
                     </a>
                     On the <a data-ng-href="{{web.link}}">web</a>:<br><br>
                     <iframe width="100%" height="400px"
@@ -280,7 +280,7 @@
                 </li>
                 <li>
                     <a data-ng-href="{{mean.link}}">
-                        <img data-ng-src="{{details.mean.image}}" data-ng-show="platforms.mean"/>
+                        <img data-ng-src="{{mean.image}}" height="200px" data-ng-show="platforms.mean"/>
                     </a>
                     On the <a data-ng-href="{{mean.link}}">web</a>:<br><br>
                     <iframe width="100%" height="400px"
@@ -290,7 +290,7 @@
                 </li>
                 <li>
                     <a data-ng-href="{{android.link}}">
-                        <img data-ng-src="{{details.android.image}}" data-ng-show="platforms.android"/>
+                        <img data-ng-src="{{android.image}}" height="200px" data-ng-show="platforms.android"/>
                     </a>
                     On Android devices through the
                     <a data-ng-href="{{android.link}}">
@@ -299,7 +299,7 @@
                 </li>
                 <li>
                     <a data-ng-href="{{ios.link}}">
-                        <img data-ng-src="{{details.ios.image}}" data-ng-show="platforms.ios"/>
+                        <img data-ng-src="{{ios.image}}" height="200px" data-ng-show="platforms.ios"/>
                     </a>
                     On Apple devices (iPhone/iPad), by downloading an app called Ionic View, and selecting the
                     app id: <a href="#ios">{{ios.ionicViewId}}</a>. See the next section for directions

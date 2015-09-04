@@ -8,16 +8,20 @@
 
                 // Links to the Platform Apps
                 $scope.web = {
-                    link: "http://scottnakada.github.io/UserAuth/yoFireAuth/dist/public/index.html"
+                    link: "http://scottnakada.github.io/UserAuth/yoFireAuth/dist/public/index.html",
+                    image: "images/LaptopUserAuth.png"
                 };
                 $scope.mean = {
-                    link: "http://scottnakada.github.io/UserAuth/yoMongoAuth/dist/public/index.html"
+                    link: "http://scottnakada.github.io/UserAuth/yoMongoAuth/dist/public/index.html",
+                    image: "images/LaptopMongoAuth.png"
                 };
                 $scope.android = {
-                    link: "http://www.amazon.com/Ionic-Firebase-User-Authentication-App/dp/B014LUR2HI/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1440823545&sr=1-1&keywords=ionFireAuth"
+                    link: "http://www.amazon.com/Ionic-Firebase-User-Authentication-App/dp/B014LUR2HI/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1440823545&sr=1-1&keywords=ionFireAuth",
+                    image: "images/AndroidUserAuth.png"
                 };
                 $scope.ios = {
                     link: "#ios",
+                    image: "images/iPadUserAuth.png",
                     ionicViewId: "43FF8114"
                 };
                 $scope.github = {
