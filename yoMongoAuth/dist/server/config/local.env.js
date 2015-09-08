@@ -15,8 +15,8 @@ module.exports = {
   TWITTER_ID: 'CMnIPp4cGi8AbB53qxjgGcLUf',
   TWITTER_SECRET: 'ojx2d4LlOXzkaaRdMaQjnZpWc9HiD3Qz3or9yyfsYTSTfD3WHd',
 
-  GOOGLE_ID: '407628761697-002febm6s7ofq96dqorh9brdnoqsmujv.apps.googleusercontent.com',
-  GOOGLE_SECRET: '8hUghCZMfPPSH_VaJlZE3vB9',
+  GOOGLE_ID: '407628761697-okrt0fnlgmkcntkue5k8f4rs7nf8cq1f.apps.googleusercontent.com',
+  GOOGLE_SECRET: 'Vm_ZwrUi5YjS0MnWqBL2zqNc',
 
   // Control debug level for modules using visionmedia/debug
   DEBUG: ''
