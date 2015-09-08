@@ -7,20 +7,20 @@ exports.setup = function (User, config) {
       clientSecret: config.google.clientSecret,
       callbackURL: config.google.callbackURL
     },
-    function(accessToken, refreshToken, profile, done) {
+    function (accessToken, refreshToken, profile, done) {
       User.findOne({
         'google.id': profile.id
-      }, function(err, user) {
+      }, function (err, user) {
         if (!user) {
           user = new User({
             name: profile.displayName,
-            email: profile.emails[0].value,
+            email: profile.emails[0].value + ":google",
             role: 'user',
             username: profile.username,
             provider: 'google',
             google: profile._json
           });
-          user.save(function(err) {
+          user.save(function (err) {
             if (err) return done(err);
             done(err, user);
           });

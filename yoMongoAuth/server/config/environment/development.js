@@ -8,5 +8,5 @@ module.exports = {
     uri: 'mongodb://scott:mongodbpass@ds047307.mongolab.com:47307/yo-mongo'
   },
 
-  seedDB: true
+  seedDB: false
 };

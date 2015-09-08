@@ -111,6 +111,25 @@ angular.module('yoMongoAuthApp')
       },
 
       /**
+       * Check if a user is logged in in local mode
+       * (we can't change passwords if we are logged in with facebook, google or twitter
+       * @return {Boolean}
+       */
+      changePassOk: function() {
+        /* See if we are logged in */
+        if (currentUser.hasOwnProperty('role')) {
+          /* See if the provider is local (changing passwords ok) */
+          if (currentUser.provider === 'local') {
+            return true;
+          } else {
+            return false;
+          }
+        }
+        /* Not logged in, don't allow changing passwords */
+        return false;
+      },
+
+      /**
        * Waits for currentUser to resolve before checking if user is logged in
        */
       isLoggedInAsync: function(cb) {

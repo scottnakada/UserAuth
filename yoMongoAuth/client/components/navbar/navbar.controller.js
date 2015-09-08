@@ -6,6 +6,7 @@ angular.module('yoMongoAuthApp')
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
+    $scope.changePassOk = Auth.changePassOk;
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
 
