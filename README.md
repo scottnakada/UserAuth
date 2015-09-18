@@ -5,7 +5,7 @@
       <a href="http://scottnakada.github.io/UserAuth/yoFireAuth/dist/public/index.html">
         <img src="images/LaptopUserAuth.png" width="35%">
       </a>
-      <a href="http://scottnakada.github.io/UserAuth/yoMongoAuth/dist/public/index.html">
+      <a href="https://yomongoauth.herokuapp.com/index.html">
               <img src="images/LaptopMongoAuth.png" width="35%">
             </a>
       <a href="http://www.amazon.com/Ionic-Firebase-User-Authentication-App/dp/B014LUR2HI/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1440823545&sr=1-1&keywords=ionFireAuth">
@@ -52,10 +52,10 @@
           On the <a href="http://scottnakada.github.io/UserAuth/yoFireAuth/dist/public/index.html">web</a>:<br><br>
         </li>
         <li>
-          <a href="http://scottnakada.github.io/UserAuth/yoMongoAuth/dist/public/index.html">
+          <a href="https://yomongoauth.herokuapp.com/index.html">
             <img src="images/LaptopMongoAuth.png" height="200px"/>
           </a>
-          On the <a href="http://scottnakada.github.io/UserAuth/yoMongoAuth/dist/public/index.html">web</a>:<br><br>
+          On the <a href="https://yomongoauth.herokuapp.com/index.html">web</a>:<br><br>
         </li>
         <li>
           <a href="http://www.amazon.com/Ionic-Firebase-User-Authentication-App/dp/B014LUR2HI/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1440823545&sr=1-1&keywords=ionFireAuth">

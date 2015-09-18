@@ -12,7 +12,7 @@
                     image: "images/LaptopUserAuth.png"
                 };
                 $scope.mean = {
-                    link: "http://scottnakada.github.io/UserAuth/yoMongoAuth/dist/public/index.html",
+                    link: "https://yomongoauth.herokuapp.com/index.html",
                     image: "images/LaptopMongoAuth.png"
                 };
                 $scope.android = {
