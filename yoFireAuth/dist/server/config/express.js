@@ -4,42 +4,113 @@
 
 'use strict';
 
-var express = require('express');
-var favicon = require('serve-favicon');
-var morgan = require('morgan');
-var compression = require('compression');
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
-var cookieParser = require('cookie-parser');
-var errorHandler = require('errorhandler');
-var path = require('path');
-var config = require('./environment');
+var _interopRequireDefault = require('babel-runtime/helpers/interop-require-default')['default'];
 
-module.exports = function(app) {
+var _express = require('express');
+
+var _express2 = _interopRequireDefault(_express);
+
+var _serveFavicon = require('serve-favicon');
+
+var _serveFavicon2 = _interopRequireDefault(_serveFavicon);
+
+var _morgan = require('morgan');
+
+var _morgan2 = _interopRequireDefault(_morgan);
+
+var _compression = require('compression');
+
+var _compression2 = _interopRequireDefault(_compression);
+
+var _bodyParser = require('body-parser');
+
+var _bodyParser2 = _interopRequireDefault(_bodyParser);
+
+var _methodOverride = require('method-override');
+
+var _methodOverride2 = _interopRequireDefault(_methodOverride);
+
+var _cookieParser = require('cookie-parser');
+
+var _cookieParser2 = _interopRequireDefault(_cookieParser);
+
+var _errorhandler = require('errorhandler');
+
+var _errorhandler2 = _interopRequireDefault(_errorhandler);
+
+var _path = require('path');
+
+var _path2 = _interopRequireDefault(_path);
+
+var _lusca = require('lusca');
+
+var _lusca2 = _interopRequireDefault(_lusca);
+
+var _environment = require('./environment');
+
+var _environment2 = _interopRequireDefault(_environment);
+
+var _expressSession = require('express-session');
+
+var _expressSession2 = _interopRequireDefault(_expressSession);
+
+module.exports = function (app) {
   var env = app.get('env');
 
-  app.set('views', config.root + '/server/views');
+  app.set('views', _environment2['default'].root + '/server/views');
   app.engine('html', require('ejs').renderFile);
   app.set('view engine', 'html');
-  app.use(compression());
-  app.use(bodyParser.urlencoded({ extended: false }));
-  app.use(bodyParser.json());
-  app.use(methodOverride());
-  app.use(cookieParser());
-  
+  app.use((0, _compression2['default'])());
+  app.use(_bodyParser2['default'].urlencoded({ extended: false }));
+  app.use(_bodyParser2['default'].json());
+  app.use((0, _methodOverride2['default'])());
+  app.use((0, _cookieParser2['default'])());
+
+  // Persist sessions with mongoStore / sequelizeStore
+  // We need to enable sessions for passport-twitter because it's an
+  // oauth 1.0 strategy, and Lusca depends on sessions
+  app.use((0, _expressSession2['default'])({
+    secret: _environment2['default'].secrets.session,
+    saveUninitialized: true,
+    resave: false
+  }));
+
+  /**
+   * Lusca - express server security
+   * https://github.com/krakenjs/lusca
+   */
+  if ('test' !== env) {
+    app.use((0, _lusca2['default'])({
+      csrf: {
+        angular: true
+      },
+      xframe: 'SAMEORIGIN',
+      hsts: {
+        maxAge: 31536000, //1 year, in seconds
+        includeSubDomains: true,
+        preload: true
+      },
+      xssProtection: true
+    }));
+  }
+
+  app.set('appPath', _path2['default'].join(_environment2['default'].root, 'client'));
+
   if ('production' === env) {
-    app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
-    app.use(express.static(path.join(config.root, 'public')));
-    app.set('appPath', config.root + '/public');
-    app.use(morgan('dev'));
+    app.use((0, _serveFavicon2['default'])(_path2['default'].join(_environment2['default'].root, 'client', 'favicon.ico')));
+    app.use(_express2['default']['static'](app.get('appPath')));
+    app.use((0, _morgan2['default'])('dev'));
+  }
+
+  if ('development' === env) {
+    app.use(require('connect-livereload')());
   }
 
   if ('development' === env || 'test' === env) {
-    app.use(require('connect-livereload')());
-    app.use(express.static(path.join(config.root, '.tmp')));
-    app.use(express.static(path.join(config.root, 'client')));
-    app.set('appPath', 'client');
-    app.use(morgan('dev'));
-    app.use(errorHandler()); // Error handler - has to be last
+    app.use(_express2['default']['static'](_path2['default'].join(_environment2['default'].root, '.tmp')));
+    app.use(_express2['default']['static'](app.get('appPath')));
+    app.use((0, _morgan2['default'])('dev'));
+    app.use((0, _errorhandler2['default'])()); // Error handler - has to be last
   }
 };
+//# sourceMappingURL=express.js.map

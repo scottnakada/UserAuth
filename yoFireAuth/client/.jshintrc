@@ -7,17 +7,18 @@
   "curly": true,
   "eqeqeq": true,
   "immed": true,
-  "indent": 2,
   "latedef": true,
   "newcap": true,
   "noarg": true,
   "quotmark": "single",
-  "regexp": true,
   "undef": true,
   "unused": true,
   "strict": true,
   "trailing": true,
   "smarttabs": true,
+  "ignoreDelimiters": [
+    { "start": "start-non-standard", "end": "end-non-standard" }
+  ],
   "globals": {
     "jQuery": true,
     "angular": true,
@@ -25,6 +26,7 @@
     "$": true,
     "_": true,
     "moment": true,
+    "jasmine": true,
     "describe": true,
     "beforeEach": true,
     "module": true,

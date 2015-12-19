@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-offset-3 col-md-6">
+        <center>
+            <br>
+            <br>
+            <table class="table table-bordered table-striped table-hover table-responsive">
+                <thead>
+                <tr>
+                    <th>Provider</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="user in users">
+                    <td>{{user.provider}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{(user.role == 0 ? "User" : (user.role == 1 ? "Manager" : "Admin"))}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </center>
+    </div>
+</div>

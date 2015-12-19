@@ -1,23 +1,23 @@
 'use strict';
 
 angular.module('yoFireAuthApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ngAnimate',
-  'firebase',
-  'toaster',
-  'angularMoment',
-  'ui.router',
-  'ui.bootstrap'
+    'yoFireAuthApp.constants',
+    'ngCookies',
+    'ngResource',
+    'ngSanitize',
+    'ui.router',
+    'ui.bootstrap',
+    'toaster',
+    'firebase'
 ])
 
-  // Define the constant which defines the Firebase database for this project
-  .constant('FURL', 'https://geowoding.firebaseio.com/')
+    // Define the constant which defines the Firebase database for this project
+    .constant('FURL', 'https://geowoding.firebaseio.com/')
 
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider
-      .otherwise('/home');
+    .config(function ($urlRouterProvider, $locationProvider) {
+        $urlRouterProvider
+            .otherwise('/');
 
-    $locationProvider.html5Mode(true);
-  });
+        $locationProvider.html5Mode(true);
+    }
+);

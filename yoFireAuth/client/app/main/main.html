@@ -1,0 +1,60 @@
+<div class="col-md-offset-3 col-md-6">
+    <center><h1>Welcome to the User Authorization Demo</h1></center>
+    <h4>
+        <br>
+
+        <div ng-hide="main.signedIn();">
+            <ol>
+                <li>
+                    Please create an account:
+                    <a ui-sref="register">
+                        <button class="btn btn-info">
+                            Register
+                        </button>
+                    </a>
+                    <br><br>
+                </li>
+                <li>
+                    Please login:
+                    <a ui-sref="login">
+                        <button class="btn btn-info">
+                            Login
+                        </button>
+                    </a>
+                </li>
+            </ol>
+        </div>
+        <div ng-show="main.signedIn();">
+            <ol>
+                <li ng-show="main.isAdmin()">
+                    Administer Accounts:
+                    <a ui-sref="admin">
+                        <button class="btn btn-info">
+                            Admin
+                        </button>
+                    </a>
+                    <br><br>
+                </li>
+                <li ng-show="main.changePassOk()">
+                    Change the password:
+                    <a ui-sref="changePass">
+                        <button class="btn btn-info">
+                            Change Password
+                        </button>
+                    </a>
+                    <br><br>
+                </li>
+                <li>
+                    Logout when done:
+                    <a ui-sref="main" ng-click="main.logout()">
+                        <button class="btn btn-info">
+                            Logout
+                        </button>
+                    </a>
+
+                </li>
+            </ol>
+        </div>
+    </h4>
+
+</div>

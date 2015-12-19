@@ -6,9 +6,10 @@
 // You will need to set these on the server you deploy to.
 
 module.exports = {
-  DOMAIN:           'http://localhost:9000',
-  SESSION_SECRET:   'yofireauth-secret',
+  DOMAIN: 'http://localhost:9000',
+  SESSION_SECRET: 'yofireauth-secret',
 
   // Control debug level for modules using visionmedia/debug
   DEBUG: ''
 };
+//# sourceMappingURL=local.env.sample.js.map
