@@ -8,7 +8,7 @@
 
                 // Links to the Platform Apps
                 $scope.web = {
-                    link: "http://scottnakada.github.io/UserAuth/yoFireAuth/dist/public/index.html",
+                    link: "http://scottnakada.github.io/UserAuth/yoFireAuth/dist/client/index.html",
                     image: "images/LaptopUserAuth.png"
                 };
                 $scope.mean = {

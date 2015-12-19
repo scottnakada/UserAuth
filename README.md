@@ -46,10 +46,10 @@
       </p>
       <ol>
         <li>
-          <a href="http://scottnakada.github.io/UserAuth/yoFireAuth/dist/public/index.html">
+          <a href="http://scottnakada.github.io/UserAuth/yoFireAuth/dist/client/index.html">
             <img src="images/LaptopUserAuth.png" height="200px"/>
           </a>
-          On the <a href="http://scottnakada.github.io/UserAuth/yoFireAuth/dist/public/index.html">web</a>:<br><br>
+          On the <a href="http://scottnakada.github.io/UserAuth/yoFireAuth/dist/client/index.html">web</a>:<br><br>
         </li>
         <li>
           <a href="https://yomongoauth.herokuapp.com/index.html">
