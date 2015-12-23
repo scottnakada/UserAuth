@@ -320,7 +320,7 @@
 
             });
 
-// Return a gravatar selected, based on email address
+            // Return a gravatar selected, based on email address
             function get_gravatar(email, size) {
 
                 email = email.toLowerCase();

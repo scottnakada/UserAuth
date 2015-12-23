@@ -5,6 +5,14 @@ angular.module('yoFireAuthApp')
     // Define the ChangePass Controller
     .controller('ChangePassCtrl', function ($scope, FURL, Auth, $state, toaster) {
 
+        $scope.currentUser = Auth.user;
+        $scope.email = $scope.currentUser.profile.email;
+        console.log("currentUser: ", $scope.currentUser);
+        console.log("currentUser.provider: ", $scope.currentUser.provider);
+        console.log("currentUser.auth: ", $scope.currentUser.auth);
+        console.log("currentUser.profile: ", $scope.currentUser.profile);
+        console.log("currentUser.email: ", $scope.currentUser.profile.email);
+
         $scope.changePassword = function (user) {
 
             Auth.changePassword(user)
